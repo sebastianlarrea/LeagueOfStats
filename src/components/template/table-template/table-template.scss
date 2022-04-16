@@ -1,0 +1,15 @@
+@import '../../../constants/css/styles.scss';
+
+.page-title {
+    font-family: 'Majorant-Bold';
+    text-align: center;
+    margin: 40px 0;
+
+    @include text-selector;
+}
+
+.dropdowns-container {
+    display: flex;
+    justify-content: center;
+    margin: 40px;
+}

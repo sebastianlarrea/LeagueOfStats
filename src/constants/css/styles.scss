@@ -1,0 +1,9 @@
+@import './variables.scss';
+
+@mixin text-selector {
+    
+    &::selection {
+        background: $main;
+        color: white;
+    }
+}

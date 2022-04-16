@@ -1,0 +1,45 @@
+@import '../../../constants/css/variables.scss';
+@import '../../../constants/css/styles.scss';
+
+.container {
+    display: flex;
+    justify-content: center;
+
+    &__table {
+
+        border-spacing: 0px;
+        width: 320px;
+
+        thead tr th {
+            font-family: 'Majorant-Bold';
+            background: #141414;
+            color: #ffffff;
+            text-transform: uppercase;
+            text-align: left;
+            padding: 20px 40px;
+
+            user-select: none;
+        }
+
+        tbody tr td {
+            font-family: 'Majorant-Regular';
+            text-align: left;
+            padding: 20px 40px;
+            border-bottom: 1px solid #141414;
+
+            @include text-selector;
+        }
+    }
+}
+
+@media (min-width: 700px) {
+    .container__table {
+        width: 600px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .container__table {
+        width: 900px;
+    }
+}

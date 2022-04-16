@@ -1,0 +1,47 @@
+@import '../../../constants/css/variables.scss';
+
+.menu-option {
+    display: none;
+}
+
+@media (min-width: 700px) {
+    .menu-option {
+        display: inline;
+        margin: 30px;
+        text-decoration: none;
+        font-family: 'Majorant-Regular';
+        font-size: 15px;
+        color: white;
+        user-select: none;
+        position: relative;
+    
+        &:hover::after {
+            background-color: $main;
+            content: '';
+            height: 20%;
+            position: absolute;
+            bottom: -7px;
+            left: 0;
+            animation: option-hover 0.2s linear 1 forwards;
+        }
+
+        @keyframes option-hover {
+            0% { width: 10%; }
+            100% { width: 100%; }
+        }
+    
+        &--selected {
+            position: relative;
+    
+            &::after {
+                background-color: $main;
+                content: '';
+                width: 100%;
+                height: 20%;
+                position: absolute;
+                bottom: -7px;
+                left: 0;
+            }
+        }
+    }
+}
