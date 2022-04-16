@@ -9,6 +9,8 @@
     --_g: no-repeat radial-gradient(#000 68%,#0000 71%);
     -webkit-mask: var(--_g),var(--_g),var(--_g);
     -webkit-mask-size: calc(var(--s)/4) calc(var(--s)/4);
+    mask: var(--_g),var(--_g),var(--_g);
+    mask-size: calc(var(--s)/4) calc(var(--s)/4);
     background: 
       conic-gradient($main, $main) no-repeat,
       conic-gradient($background, $background ) no-repeat;
