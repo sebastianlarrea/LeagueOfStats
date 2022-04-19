@@ -10,6 +10,7 @@ import ranked from '../services/ranked-service'
 import TableTemplate from '../components/template/table-template/table-template'
 
 const Ranked = () => {
+
     const tableColumns = ['summoner Name', 'wins', 'losses', 'league Points']
     const dropdownOptions = [
         {
@@ -21,13 +22,14 @@ const Ranked = () => {
             options: ELO
         }
     ]
+
     const region = useSelector(state => state.region)
     const elo = useSelector(state => state.elo)
+
     const dispatch = useDispatch()
 
     useEffect(() => {
         const getPlayers = () => {
-
             ranked[elo](region).then(response => {
                 const orderByLeaguePoints = response
                     .sort((a, b) => b.leaguePoints - a.leaguePoints)

@@ -3,7 +3,6 @@ import React from 'react'
 import MenuNav from '../../molecules/menu-nav/menu-nav'
 
 import ROUTES from '../../../constants/js/routes'
-import TITLES from '../../../constants/js/titles'
 
 import { ReactComponent as MenuBarIcon } from '../../../assets/icons/bars-solid.svg'
 import { ReactComponent as LolIcon } from '../../../assets/icons/lol-icon.svg'
@@ -28,10 +27,10 @@ const Header = () => {
 
     return (
         <header className="main-header">
-            <caption className="main-header__logo-title">
+            <div className="main-header__logo-title">
                 <LolIcon className="main-header__logo" />
-                <h1 className="main-header__title">{TITLES.MENU}</h1>
-            </caption>
+                <h1 className="main-header__title">LEAGUE OF STATS</h1>
+            </div>
             <MenuNav menuOptions={menuOptions} />
             <MenuBarIcon className="main-header__menu-bar" />
         </header>

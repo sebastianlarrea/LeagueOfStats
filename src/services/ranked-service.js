@@ -1,5 +1,5 @@
 import axios from 'axios'
-import RIOT_API from '../constants/js/services-url'
+import RIOT_API from '../constants/js/riot-api'
 
 axios.interceptors.response.use(response => {
 
@@ -15,7 +15,7 @@ const getUrl = (region, tier) => {
         `https://${region}${RIOT_API.BASE_URL}`
     )
 
-    apiUrl.searchParams.set('api_key', RIOT_API.API_KEY)
+    apiUrl.searchParams.set('api_key', RIOT_API.KEY)
     return apiUrl
 }
 

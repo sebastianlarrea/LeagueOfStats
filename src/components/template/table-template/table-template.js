@@ -15,7 +15,13 @@ const TableTemplate = props => {
             <h1 className="page-title">{title}</h1>
             {dropdownOptions && (
                 <section className="dropdowns-container">
-                    {dropdownOptions.map(dropdown => <Dropdown dropdownTitle={dropdown.title} options={dropdown.options} />)}
+                    {dropdownOptions.map((dropdown, index) => (
+                        <Dropdown
+                            key={index}
+                            dropdownTitle={dropdown.title}
+                            options={dropdown.options}
+                        />
+                    ))}
                 </section>
             )}
             <Table columns={tableColumns} stateIndex={stateIndex} />

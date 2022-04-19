@@ -6,7 +6,7 @@ const MASTERS = 'masterleagues/by-queue/'
 
 const QUEU = 'RANKED_SOLO_5x5'
 
-const API_KEY = 'RGAPI-8f8f616a-525f-489b-b466-4a89c4229db3'
+const KEY = 'RGAPI-29d020d7-fee9-4ce8-8b0f-c5123357ba47'
 
 const RIOT_API = {
     BASE_URL,
@@ -14,7 +14,7 @@ const RIOT_API = {
     GRANDMASTERS,
     MASTERS,
     QUEU,
-    API_KEY 
+    KEY 
 }
 
 export default RIOT_API

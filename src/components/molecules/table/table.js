@@ -14,16 +14,16 @@ const Table = props => {
                 <table className="container__table">
                     <thead>
                         <tr>
-                            {columns.map(columnName => (
-                                <th>{columnName}</th>
+                            {columns.map((columnName, index) => (
+                                <th key={index}>{columnName}</th>
                             ))}
                         </tr>
                     </thead>
                     <tbody>
-                        {tableData.map(item => (
-                            <tr>
-                                {columns.map(columnName => (
-                                    <td>{item[columnName.replace(' ', '')]}</td>
+                        {tableData.map((item, index) => (
+                            <tr key={index}>
+                                {columns.map((columnName, index) => (
+                                    <td key={index}>{item[columnName.replace(' ', '')]}</td>
                                 ))}
                             </tr>
                         ))}

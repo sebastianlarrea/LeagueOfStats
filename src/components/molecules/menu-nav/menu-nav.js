@@ -2,12 +2,14 @@ import React from 'react'
 import MenuOption from '../../atoms/menu-option/menu-option'
 import './menu-nav.scss'
 
-const MenuNav = ({menuOptions}) => {
+const MenuNav = props => {
+
+    const { menuOptions } = props
 
     return (
         <nav className="menu-nav">
             {menuOptions.map((menuOption, index) => {
-                return <MenuOption key={index } optionText={menuOption.text} optionHref={menuOption.href} />
+                return <MenuOption key={index} optionText={menuOption.text} optionHref={menuOption.href} />
             })}
         </nav>
     )
